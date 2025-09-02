@@ -1,3 +1,9 @@
+# Datasets
+Module1_MedicalCodexes/loinc/Loinc.csv
+Module1_MedicalCodexes/icd/us/icd10cm_order_2025.txt
+Module1_MedicalCodexes/icd/who/icd102019syst_codes.txt
+Module1_MedicalCodexes/hcpcs/HCPC2025_OCT_ANWEB.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
