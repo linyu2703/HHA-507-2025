@@ -100,9 +100,6 @@ For **each** of the 7 medical codexes, create a Python script that:
 Standardize column names across all codexes:
 - `code`: The primary identifier
 - `description`: Human-readable description
-- `category`: High-level grouping (where applicable)
-- `status`: Active/Inactive/Retired
-- `effective_date`: When code became effective
 - `last_updated`: Processing timestamp
 
 ### 2. Common Utilities Module
