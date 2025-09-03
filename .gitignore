@@ -3,6 +3,15 @@ Module1_MedicalCodexes/loinc/Loinc.csv
 Module1_MedicalCodexes/icd/us/icd10cm_order_2025.txt
 Module1_MedicalCodexes/icd/who/icd102019syst_codes.txt
 Module1_MedicalCodexes/hcpcs/HCPC2025_OCT_ANWEB.txt
+Module1_MedicalCodexes/icd/who/output/icd102019syst_codes.csv
+Module1_MedicalCodexes/hcpcs/output/HCPC2025_OCT_ANWEB.csv
+Module1_MedicalCodexes/icd/us/output/icd10cm_order_2025.csv
+Module1_MedicalCodexes/npi/npidata_pfile_20050523-20250810.csv
+Module1_MedicalCodexes/npi/output/npidata_pfile_20050523-20250810.csv
+Module1_MedicalCodexes/rxnorm/files/*.rrf
+Module1_MedicalCodexes/rxnorm/output/RXNATOMARCHIVE.csv
+Module1_MedicalCodexes/snowmed/sct2_Description_Full-en_US1000124_20250301.txt
+Module1_MedicalCodexes/snowmed/output/sct2_Description_Full.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
