@@ -1,3 +1,6 @@
+# Mac specific files
+.DS_Store
+
 # Datasets
 Module1_MedicalCodexes/loinc/Loinc.csv
 Module1_MedicalCodexes/icd/us/icd10cm_order_2025.txt
