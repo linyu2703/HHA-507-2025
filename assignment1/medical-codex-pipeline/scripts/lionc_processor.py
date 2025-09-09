@@ -32,6 +32,6 @@ loinc_small = loinc_small.rename(columns={
 
 file_output_path = 'assignment1/medical-codex-pipeline/output/loinc_small.csv'
 
-loinc_small.to_csv('assignment1/medical-codex-pipeline/output/loinc_small.csv')
+loinc_small.to_csv(file_output_path)
 
 loinc_small.to_csv('assignment1/medical-codex-pipeline/output/loinc_small_noindex.csv', index=False)
