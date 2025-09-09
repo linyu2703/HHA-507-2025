@@ -1,7 +1,13 @@
 import pandas as pd
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.common_functions import save_to_format
 
 # path to the HCPCS text file
-file_path = "assignment1/medical-codex-pipeline/input/HCPC2025_OCT_ANWEB_v3.txt"
+file_path = "input/HCPC2025_OCT_ANWEB_v3.txt"
 
 # colspecs based on actual column widths
 colspecs = [(0, 11), (11, 90), (90, 180), (180, 200), (200, 220), (220, 240), (240, 260), (260, 280)]
@@ -38,5 +44,7 @@ df_small['last_updated'] = '2025-09-03'
 print(df_small.head())
 
 ## saving csv into output subfolder
-output_path = "assignment1/medical-codex-pipeline/output/HCPC2025_OCT_ANWEB.csv"
-df_small.to_csv(output_path, index=False)
+
+save_to_format(df_small, baseFile="HCPC2025_OCT_ANWEB")
+# output_path = "assignment1/medical-codex-pipeline/output/HCPC2025_OCT_ANWEB.csv"
+# df_small.to_csv(output_path, index=False)
