@@ -2,7 +2,7 @@ import polars as pl
 import pandas as pd
 import time
 
-npi_file_path = 'Module1_MedicalCodexes/npi/npidata_pfile_20050523-20250810.csv'
+npi_file_path = 'Module1_MedicalCodexes/npi/npidata_pfile_20050523-20250907.csv'
 
 ## just load the first 1000 rows
 start_time_polars = time.time()
@@ -51,4 +51,3 @@ df_polars_small = df_polars_small.rename({
 output_path = 'Module1_MedicalCodexes/npi/output/npi_small.csv'
 df_polars_small.write_csv(output_path)
 df_polars_small.write_parquet('Module1_MedicalCodexes/npi/output/npi_small.parquet')
-
