@@ -27,7 +27,7 @@ list_cols = ['LOINC_NUM', 'LONG_COMMON_NAME']
 loinc_small = loinc[['LOINC_NUM', 'LONG_COMMON_NAME']]
 loinc_small = loinc[list_cols]
 
-loinc_small['last_updated'] = '2025-09-03'
+loinc_small['last_updated'] = '09-10-2025'
 
 # loinc_small = loinc_small.rename(columns={})
 

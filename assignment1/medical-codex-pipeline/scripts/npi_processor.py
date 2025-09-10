@@ -40,7 +40,7 @@ df_polars_small = df_polars.select([
 
 ## add last_updated column
 df_polars_small = df_polars_small.with_columns(
-    pl.lit('2025-09-03').alias('last_updated')
+    pl.lit('09-10-2025').alias('last_updated')
 )
 
 ## rename columns

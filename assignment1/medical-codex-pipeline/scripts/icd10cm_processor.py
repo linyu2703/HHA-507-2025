@@ -42,7 +42,8 @@ with open(file_path, 'r', encoding='utf-8') as file:
             'code': code,
             'level': level,
             'description': description,
-            'description_detailed': description_detailed
+            'description_detailed': description_detailed,
+            'last_updated': '09-10-2025'
         })
 
 ## Create a DataFrame from the parsed codes

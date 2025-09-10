@@ -39,7 +39,7 @@ df_small = df_small.dropna(subset=['code', 'description']) #now there is no empt
 
 df_small = df_small.drop_duplicates(subset=['code'])
 
-df_small['last_updated'] = '2025-09-03'
+df_small['last_updated'] = '09-10-2025'
 
 print(df_small.head())
 
