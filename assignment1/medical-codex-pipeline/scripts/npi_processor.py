@@ -1,8 +1,14 @@
 import polars as pl
 import pandas as pd
 import time
+import os
+import sys
 
-npi_file_path = 'assignment1/medical-codex-pipeline/input/npidata_pfile_20050523-20250907.csv'
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.common_functions import save_to_format
+
+npi_file_path = 'input/npidata_pfile_20050523-20250907.csv'
 
 ## --- Polars load ---
 start_time_polars = time.time()
@@ -44,5 +50,6 @@ df_polars_small = df_polars_small.rename({
 })
 
 ## save to output
-df_polars_small.write_csv('assignment1/medical-codex-pipeline/output/npi_small.csv')
-df_polars_small.write_parquet('assignment1/medical-codex-pipeline/output/npi_small.parquet')
+save_to_format(df_polars_small.to_pandas(), baseFile="npi_small")
+# df_polars_small.write_csv('assignment1/medical-codex-pipeline/output/npi_small.csv')
+# df_polars_small.write_parquet('assignment1/medical-codex-pipeline/output/npi_small.parquet')

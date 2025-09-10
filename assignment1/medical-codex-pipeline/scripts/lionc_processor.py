@@ -1,7 +1,13 @@
 import pandas as pd 
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.common_functions import save_to_format
 
 ## Input/Loinc.csv
-loinc = pd.read_csv('assignment1/medical-codex-pipeline/input/Loinc.csv')
+loinc = pd.read_csv('input/Loinc.csv')
 
 ### Info to describe 
 loinc.info()
@@ -30,8 +36,10 @@ loinc_small = loinc_small.rename(columns={
     'LONG_COMMON_NAME': 'description',
 })
 
-file_output_path = 'assignment1/medical-codex-pipeline/output/loinc_small.csv'
+save_to_format(loinc_small, baseFile="loinc_small")
 
-loinc_small.to_csv(file_output_path)
+# file_output_path = 'assignment1/medical-codex-pipeline/output/loinc_small.csv'
 
-loinc_small.to_csv('assignment1/medical-codex-pipeline/output/loinc_small_noindex.csv', index=False)
+# loinc_small.to_csv(file_output_path)
+
+# loinc_small.to_csv('assignment1/medical-codex-pipeline/output/loinc_small_noindex.csv', index=False)

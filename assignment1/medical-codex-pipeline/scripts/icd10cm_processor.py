@@ -1,8 +1,14 @@
 import pandas as pd 
 import re
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from utils.common_functions import save_to_format
 
 # Define the file path
-file_path= 'assignment1/medical-codex-pipeline/input/icd10cm_order_2025.txt'
+file_path= 'input/icd10cm_order_2025.txt'
 
 # This initializes a blank list to hold the parsed codes (e.g., individual rows from the text file)
 codes = []
@@ -43,6 +49,7 @@ with open(file_path, 'r', encoding='utf-8') as file:
 icdcodes = pd.DataFrame(codes)
 
 ## Save the DataFrame to a CSV file
-icdcodes.to_csv("assignment1/medical-codex-pipeline/output/icd10cm_order_2025.csv", index=False)
+save_to_format(icdcodes, baseFile="icd10cm_order_2025")
+# icdcodes.to_csv("assignment1/medical-codex-pipeline/output/icd10cm_order_2025.csv", index=False)
 
 
