@@ -2,8 +2,6 @@ import pandas as pd
 import os
 
 def save_to_format(df:pd.DataFrame, baseFile: str, outputDir: str='output') -> None:
-    if outputDir is None:
-        outputDir = os.path.join(os.path.dirname(__file__), '..', 'output')
     os.makedirs(outputDir,exist_ok=True)
     csv_path = os.path.join(outputDir, f"{baseFile}.csv")
     df.to_csv(csv_path, index = False)
