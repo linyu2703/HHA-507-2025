@@ -7,6 +7,6 @@
 <li>LOINC (US): https://loinc.org/downloads/</li>
 <li>RxNorm (US): https://www.nlm.nih.gov/research/umls/rxnorm/docs/rxnormfiles.html</li>
 <li>NPI (US): https://download.cms.gov/nppes/NPI_Files.html</li>
-</ui>
+</ui><br>
 <p>Setup: to run py files must have the right directory: '../HHA-507-2025/assigment1/medical-codex-pipeline'</p>
 <p>common_functions.py contains a recallable function save_to_format that saves dataframes to csv formatted file which is used in all processor.py script files. </p>
