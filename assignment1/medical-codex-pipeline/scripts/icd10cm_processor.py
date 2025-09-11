@@ -3,11 +3,12 @@ import re
 import os
 import sys
 
+# allowing python to import funcs from parent directory util folder
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from utils.common_functions import save_to_format
 
-# Define the file path
+# define the file path
 file_path= 'input/icd10cm_order_2025.txt'
 
 # This initializes a blank list to hold the parsed codes (e.g., individual rows from the text file)
@@ -49,8 +50,7 @@ with open(file_path, 'r', encoding='utf-8') as file:
 ## Create a DataFrame from the parsed codes
 icdcodes = pd.DataFrame(codes)
 
-## Save the DataFrame to a CSV file
+# using the called save_to_format function to change the df_small dataframe, to a csv in output folder
 save_to_format(icdcodes, baseFile="icd10cm_order_2025")
-# icdcodes.to_csv("assignment1/medical-codex-pipeline/output/icd10cm_order_2025.csv", index=False)
 
 
